@@ -3,6 +3,7 @@ window.onload = init;
 function start(){}
 function update(){}
 
+// deprecated, will be removed!
 red       = "rgb(255, 0, 0)";
 green     = "rgb(0, 255, 0)";
 blue      = "rgb(0, 0, 255)";
@@ -221,3 +222,15 @@ function rgb(r, g, b)
 {
   return "rgb(" + r + "," + g + "," + b + ")";
 }
+
+function line(x1, y1, x2, y2, width, color)
+{
+  context2D.strokeStyle = color;
+  context2D.lineWidth   = width;
+  context2D.beginPath();
+  context2D.moveTo(x1, y1);
+  context2D.lineTo(x2, y2);
+  context2D.stroke();
+  context2D.closePath();
+}
+
